@@ -9,12 +9,12 @@ body {
     padding: 0;
     background-color: #003300;
     color: #fff;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
 }
 
 header {
     position: relative;
-    background-color: rgba(0, 77, 0, 0.35);
+    height: auto;
     padding: 20px;
     text-align: left;
     overflow: hidden;
@@ -38,10 +38,8 @@ header h1 {
     font-size: 3em;
     color: #ffcc00;
     line-height: 1.2;
-}
-
-nav {
     position: relative;
+    z-index: 1;
 }
 
 .nav-buttons {
@@ -54,40 +52,30 @@ nav {
 .nav-buttons button {
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    color: #ffcc00;
     border: none;
     border-radius: 8px;
-    padding: 10px 30px;
+    padding: 20px 40px;
     font-size: 1em;
-    color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .nav-buttons button:hover {
     opacity: 0.7;
 }
 
-.nav-buttons button:nth-child(1) {
-    background: url('images/authorbg.jpg') no-repeat center center/cover;
+.bio-button {
+    background: url('images/authorbg.jpg');
 }
 
-.nav-buttons button:nth-child(2) {
-    background: url('images/bookbg.jpg') no-repeat center center/cover;
+.book-button {
+    background: url('images/bookbg.jpg');
 }
 
-.nav-buttons button:nth-child(3) {
-    background: url('images/contactbg.jpg') no-repeat center center/cover;
-}
-
-.hamburger-menu {
-    display: none;
-    font-size: 2em;
-    color: #ffcc00;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 100; /* Ensure it's above other elements */
+.contact-button {
+    background: url('images/contactbg.jpg');
 }
 
 main {
@@ -122,30 +110,25 @@ section::before {
 
 #bio::before {
     background: url('images/authorbg.jpg') no-repeat center center/cover;
-    background-color: rgba(0, 77, 0, 0.35);
 }
 
 #book::before {
     background: url('images/bookbg.jpg') no-repeat center center/cover;
-    background-color: rgba(0, 77, 0, 0.35);
 }
 
 #contact::before {
     background: url('images/contactbg.jpg') no-repeat center center/cover;
-    background-color: rgba(0, 77, 0, 0.35);
 }
 
 section img {
-    max-width: 50%; /* Restrict maximum width */
-    width: 100%; /* Ensure it scales within its container */
+    max-width: 50%;
     height: auto;
     margin: 20px 0;
     border-radius: 8px;
 }
 
 #book img {
-    max-width: 65%; /* Restrict maximum width for cover image */
-    width: 100%; /* Ensure it scales within its container */
+    max-width: 65%;
 }
 
 section h2 {
@@ -180,27 +163,6 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 0.8em;
-}
-
-@media (max-width: 768px) {
-    .nav-buttons {
-        display: none;
-        flex-direction: column;
-        background-color: #004d00;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-
-    .nav-buttons.show {
-        display: flex;
-    }
 }
 
 .scrolled-in {
