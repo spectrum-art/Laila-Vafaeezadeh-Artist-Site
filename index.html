@@ -5,27 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laila Vafaeezadeh - Author</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Laila Vafaeezadeh</h1>
-        <p>Author of "I Was Raptured By Mistake"</p>
+        <h1>Laila<br>Vafaeezadeh</h1>
     </header>
     <nav>
-        <ul>
-            <li><a href="#bio">About the Author</a></li>
-            <li><a href="#book">The Book</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-buttons">
+            <button onclick="scrollToSection('bio')">About the Author</button>
+            <button onclick="scrollToSection('book')">The Book</button>
+            <button onclick="scrollToSection('contact')">Contact</button>
+        </div>
     </nav>
     <main>
         <section id="bio">
             <h2>About the Author</h2>
+            <img src="images/author.jpg" alt="Author Photo">
             <p>Laila Vafaeezadeh was born and raised in the greater Seattle area, surrounded by the beauty of evergreen forests. From a young age, she showed a passion for writing and storytelling. She has worked with animals for over a decade and loves collecting unique and beautiful objects. Writing remains her first love and a driving force in her life.</p>
         </section>
         <section id="book">
             <h2>The Book</h2>
+            <img src="images/cover.jpg" alt="Book Cover">
             <p><strong>"I Was Raptured By Mistake"</strong> is an enchanting tale of self-discovery and reflection. Purchase your copy today from:</p>
             <ul>
                 <li><a href="#">Amazon</a></li>
