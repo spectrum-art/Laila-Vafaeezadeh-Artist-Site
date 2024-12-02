@@ -1,15 +1,20 @@
+/* Ensure consistent box-sizing globally */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #003300;
     color: #fff;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 header {
     background: url('images/header.jpg') no-repeat center center/cover;
-    background-color: rgba(0, 77, 0, 0.5);
+    background-color: rgba(0, 77, 0, 0.35); /* Reduced to 35% opacity */
     padding: 20px;
     text-align: left;
 }
@@ -55,8 +60,8 @@ main {
 
 section {
     position: relative;
-    width: 100%;
-    margin-bottom: 40px;
+    width: 100%; /* Ensure sections do not exceed viewport width */
+    margin: 0 auto 40px auto; /* Center align with auto margins */
     text-align: center;
     padding: 40px 20px;
     overflow: hidden;
@@ -71,23 +76,23 @@ section::before {
     height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.35; /* Reduced to 35% opacity */
     z-index: -1;
 }
 
 #bio::before {
     background: url('images/authorbg.jpg') no-repeat center center/cover;
-    background-color: rgba(0, 77, 0, 0.5);
+    background-color: rgba(0, 77, 0, 0.35);
 }
 
 #book::before {
     background: url('images/bookbg.jpg') no-repeat center center/cover;
-    background-color: rgba(0, 77, 0, 0.5);
+    background-color: rgba(0, 77, 0, 0.35);
 }
 
 #contact::before {
     background: url('images/contactbg.jpg') no-repeat center center/cover;
-    background-color: rgba(0, 77, 0, 0.5);
+    background-color: rgba(0, 77, 0, 0.35);
 }
 
 section img {
