@@ -4,11 +4,13 @@ body {
     padding: 0;
     background-color: #003300;
     color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 header {
     background: url('images/header.jpg') no-repeat center center/cover;
     background-color: #004d00;
+    background-color: rgba(0, 77, 0, 0.5); /* Reduced opacity */
     padding: 20px;
     text-align: left;
 }
@@ -56,7 +58,7 @@ section {
     width: 100%;
     margin-bottom: 40px;
     text-align: center;
-    background-color: rgba(0, 77, 0, 0.7);
+    background-color: rgba(0, 77, 0, 0.5); /* Reduced opacity */
     padding: 40px 20px;
     background-size: cover;
     background-position: center;
@@ -64,17 +66,17 @@ section {
 
 #bio {
     background: url('images/authorbg.jpg') no-repeat center center/cover;
-    background-color: rgba(0, 77, 0, 0.7);
+    background-color: rgba(0, 77, 0, 0.5);
 }
 
 #book {
     background: url('images/bookbg.jpg') no-repeat center center/cover;
-    background-color: rgba(0, 77, 0, 0.7);
+    background-color: rgba(0, 77, 0, 0.5);
 }
 
 #contact {
     background: url('images/contactbg.jpg') no-repeat center center/cover;
-    background-color: rgba(0, 77, 0, 0.7);
+    background-color: rgba(0, 77, 0, 0.5);
 }
 
 section img {
