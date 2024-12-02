@@ -1,47 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laila Vafaeezadeh - Author</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Laila<br>Vafaeezadeh</h1>
-    </header>
-    <nav>
-        <div class="nav-buttons">
-            <button onclick="scrollToSection('bio')">About the Author</button>
-            <button onclick="scrollToSection('book')">The Book</button>
-            <button onclick="scrollToSection('contact')">Contact</button>
-        </div>
-    </nav>
-    <main>
-        <section id="bio">
-            <h2>About the Author</h2>
-            <img src="images/author.jpg" alt="Author Photo">
-            <p>Laila Vafaeezadeh was born and raised in the greater Seattle area, surrounded by the beauty of evergreen forests. From a young age, she showed a passion for writing and storytelling. She has worked with animals for over a decade and loves collecting unique and beautiful objects. Writing remains her first love and a driving force in her life.</p>
-        </section>
-        <section id="book">
-            <h2>The Book</h2>
-            <img src="images/cover.jpg" alt="Book Cover">
-            <p><strong>"I Was Raptured By Mistake"</strong> is an enchanting tale of self-discovery and reflection. Purchase your copy today from:</p>
-            <div>
-                <a href="#">Amazon</a>
-                <a href="#">Barnes & Noble</a>
-                <a href="#">IndieBound</a>
-            </div>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>For inquiries, please email <a href="mailto:placeholder@example.com">placeholder@example.com</a>.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Laila Vafaeezadeh. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #003300;
+    color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    background: url('images/header.jpg') no-repeat center center/cover;
+    background-color: #004d00;
+    background-color: rgba(0, 77, 0, 0.5); /* Reduced opacity */
+    padding: 20px;
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #ffcc00;
+    line-height: 1.2;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 20px;
+}
+
+.nav-buttons button {
+    background-color: #004d00;
+    color: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background-color: #ffcc00;
+    color: #004d00;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    background-color: rgba(0, 77, 0, 0.5); /* Reduced opacity */
+    padding: 40px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+#bio {
+    background: url('images/authorbg.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 77, 0, 0.5);
+}
+
+#book {
+    background: url('images/bookbg.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 77, 0, 0.5);
+}
+
+#contact {
+    background: url('images/contactbg.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 77, 0, 0.5);
+}
+
+section img {
+    max-width: 50%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+#book img {
+    max-width: 65%;
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section p, section img {
+    font-family: 'Roboto', sans-serif;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#book div {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#book a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #002200;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+/* Fade-in animation */
+.scrolled-in {
+    opacity: 1;
+    transform: translateY(0);
+}
