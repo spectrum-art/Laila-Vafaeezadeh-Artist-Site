@@ -146,9 +146,10 @@ section img {
     max-width: 65%;
 }
 
-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2em;
+section h2,
+section p,
+section img,
+#book div a {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -156,13 +157,9 @@ section h2 {
     z-index: 1;
 }
 
-section p {
-    font-family: 'Roboto', sans-serif;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-    position: relative;
-    z-index: 1;
+.scrolled-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #book div {
@@ -182,9 +179,4 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 0.8em;
-}
-
-.scrolled-in {
-    opacity: 1;
-    transform: translateY(0);
 }
