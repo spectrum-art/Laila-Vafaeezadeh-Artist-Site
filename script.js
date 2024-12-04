@@ -18,3 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
 function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
+
+function toggleMenu() {
+    const navButtons = document.querySelector('.nav-buttons');
+    if (navButtons.classList.contains('collapsed')) {
+        navButtons.classList.remove('collapsed');
+        navButtons.classList.add('expanded');
+    } else {
+        navButtons.classList.remove('expanded');
+        navButtons.classList.add('collapsed');
+    }
+}
