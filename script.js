@@ -1,31 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Include all relevant elements
-    const elements = document.querySelectorAll('section h2, section p, section img, #book div a');
-
-    // Intersection Observer setup
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('scrolled-in');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    // Observe each element
-    elements.forEach(element => observer.observe(element));
-});
-
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-}
-
-function toggleMenu() {
+    // Toggle the menu when the hamburger icon is clicked
     const navButtons = document.querySelector('.nav-buttons');
-    if (navButtons.classList.contains('collapsed')) {
-        navButtons.classList.remove('collapsed');
-        navButtons.classList.add('expanded');
-    } else {
-        navButtons.classList.remove('expanded');
-        navButtons.classList.add('collapsed');
-    }
-}
+    const hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener('click', () => {
+        if (navButtons.classList.contains('collapsed')) {
+            navButtons.classList.remove('collapsed');
+            navButtons.classList.add('expanded');
+        } else {
+            navButtons.classList.remove('expanded');
+            navButtons.classList.add('collapsed');
+        }
+    });
+
+    // Collapse the menu on outside click or scroll
+    document.addEventListener('click', (event) => {
+        if (
+            navButtons.classList.contains('expanded') &&
+            !navButtons.contains(event.target) &&
+            !hamburger.contains(event.target)
+        ) {
+            navButtons.classList.remove('expanded');
+            navButtons.classList.add('collapsed');
+        }
+    });
+
+    window.addEventListener('scroll', () => {
+        if (navButtons.classList.contains('expanded')) {
+            navButtons.classList.remove('expanded');
+            navButtons.classList.add('collapsed');
+        }
+    });
+});
