@@ -57,20 +57,23 @@ header h1 {
 .nav-buttons.expanded {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: rgba(0, 77, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 77, 0, 0.95); /* Dark background for visibility */
     padding: 10px;
-    border-radius: 8px;
-    z-index: 10;
+    border-radius: 0;
+    z-index: 9999; /* Ensure it is above all other elements */
 }
 
 .nav-buttons.expanded button {
-    margin: 5px 0;
+    margin: 10px auto;
+    padding: 15px 30px;
+    width: 90%; /* Full-width buttons with some margin */
 }
 
-/* Hamburger menu */
 .hamburger {
     display: none;
     font-size: 1.5em;
@@ -80,7 +83,7 @@ header h1 {
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 2;
+    z-index: 10000; /* Above the expanded menu */
     cursor: pointer;
 }
 
