@@ -61,11 +61,13 @@ header h1 {
     top: 0;
     right: 0;
     width: 50vw; /* Limit to 50% of the viewport width */
-    height: 100vh; /* Full height */
     background: rgba(0, 77, 0, 0.95); /* Dark background */
     padding: 10px;
     border-radius: 0;
     z-index: 9999; /* Ensure it is above all other elements */
+    height: auto; /* Adjust height dynamically based on content */
+    max-height: 100vh; /* Prevent it from exceeding the viewport height */
+    overflow-y: auto; /* Enable scrolling if the content exceeds the viewport height */
 }
 
 .nav-buttons.expanded button {
