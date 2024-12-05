@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navButtons = document.querySelector('.nav-buttons');
     const hamburger = document.querySelector('.hamburger');
-    const elements = document.querySelectorAll('section h2, section p, section img, #book div a');
+    const elements = document.querySelectorAll('section h2, section p, section img, #book a');
 
     // Set initial state for the navigation menu to collapsed
     navButtons.classList.add('collapsed');
