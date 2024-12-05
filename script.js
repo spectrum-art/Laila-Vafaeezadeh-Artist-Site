@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navButtons = document.querySelector('.nav-buttons');
     const hamburger = document.querySelector('.hamburger');
-    const elements = document.querySelectorAll('section h2, section p, section img, #book a');
+    const elements = document.querySelectorAll('section h2, section p, section img, #book div, #book a');
 
     // Set initial state for the navigation menu to collapsed
     navButtons.classList.add('collapsed');
@@ -41,6 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('scrolled-in');
+
+                // Add scrolled-in class to nested links if the parent div is observed
+                if (entry.target.tagName === 'DIV') {
+                    entry.target.querySelectorAll('a').forEach(link => link.classList.add('scrolled-in'));
+                }
+
                 observer.unobserve(entry.target); // Stop observing once it's visible
             }
         });
