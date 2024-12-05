@@ -212,16 +212,25 @@ section img,
     transform: translateY(0);
 }
 
+#book a {
+    z-index: 2; /* Ensure links are above the background */
+    position: relative;
+}
+
 #book div {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
+#book a.scrolled-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 #book a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: bold;
+    display: inline-block; /* Ensure links are displayed */
+    visibility: visible;
 }
 
 footer {
