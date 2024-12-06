@@ -186,6 +186,9 @@ section::before {
 
 #contact::before {
     background: url('images/contactbg.jpg') no-repeat center center/cover;
+}
+
+section#contact {
     max-width: 50%;
 }
 
