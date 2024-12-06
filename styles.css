@@ -256,3 +256,50 @@ footer {
     font-weight: lighter;
     color: #ffcc00
 }
+
+@media (min-width: 768px) {
+    .author-section, .book-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .author-section img {
+        margin-right: 20px;
+    }
+    .book-section img {
+        margin-left: 20px;
+    }
+}
+
+p {
+    background-color: #0d1a0d;
+    opacity: 0.85;
+    box-shadow: 0px 4px 4px #0d1a0d;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    background: none;
+    padding: 10px 20px;
+    color: #e6e2cf;
+    text-decoration: none;
+    border: none;
+}
+
+.hamburger-menu {
+    background-color: #0d1a0d;
+    opacity: 0.85;
+    border-radius: 12px;
+    color: #e6e2cf;
+    padding: 10px;
+}
+
+.contact-section {
+    width: 100%;
+    padding: 20px;
+}
