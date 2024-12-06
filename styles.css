@@ -103,6 +103,7 @@ header h1 {
 .nav-buttons button {
     position: relative;
     color: #000000;
+    font-weight: bold;
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
