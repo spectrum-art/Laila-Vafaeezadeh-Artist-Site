@@ -6,8 +6,8 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #0d1a0d;
+    color: #e6e2cf;
     overflow-x: hidden;
 }
 
@@ -103,7 +103,7 @@ header h1 {
 
 .nav-buttons button {
     position: relative;
-    color: #000000;
+    color: #e6e2cf;
     font-weight: bold;
     border: none;
     border-radius: 8px;
@@ -302,4 +302,60 @@ nav a {
 .contact-section {
     width: 100%;
     padding: 20px;
+}
+
+@media (min-width: 1024px) {
+    #bio, #book {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    #bio img, #book img {
+        max-width: 40%;
+    }
+
+    #bio p, #book p {
+        max-width: 50%;
+        margin: 0;
+    }
+}
+
+p {
+    background-color: rgba(13, 26, 13, 0.85); /* Semi-transparent off-black */
+    box-shadow: 0px 4px 4px #0d1a0d;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 80%;
+    text-align: justify;
+}
+
+nav a {
+    background: none;
+    color: #e6e2cf;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(230, 226, 207, 0.2);
+}
+
+.hamburger-menu {
+    background-color: rgba(13, 26, 13, 0.85);
+    border-radius: 12px;
+    padding: 10px;
+}
+
+#contact {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
