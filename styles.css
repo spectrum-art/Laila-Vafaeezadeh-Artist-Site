@@ -211,6 +211,7 @@ section img,
     position: relative;
     z-index: 1;
     max-width: 60%;
+    margin: auto;
 }
 
 .scrolled-in {
