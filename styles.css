@@ -201,6 +201,11 @@ section img {
     max-width: 65%;
 }
 
+section h {
+    max-width: 60%;
+    margin: auto;
+}
+
 section h2,
 section p,
 section img,
