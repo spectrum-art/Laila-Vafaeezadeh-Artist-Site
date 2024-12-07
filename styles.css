@@ -43,175 +43,92 @@ header h1 {
     z-index: 1;
 }
 
-.nav-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 10px;
-    position: relative;
-}
-
-.nav-buttons.collapsed {
-    display: none;
-}
-
-.nav-buttons.expanded {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: min(50vw, 150px);
-    height: auto;
-    max-height: 100vh;
-    background: white;
-    opacity: 0.85; /* Adjusted for better visibility */
-    padding: 10px;
-    border-radius: 12px;
-    z-index: 9999;
-    overflow-y: auto;
-}
-
-.nav-buttons.expanded button {
-    margin: 10px auto;
-    padding: 15px 30px;
-    width: 90%; /* Full-width buttons within the menu */
-}
-
-.hamburger {
-    display: none;
-    font-size: 1.5em;
-    background: none;
-    border: none;
-    color: #ffcc00;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 10000; /* Above the expanded menu */
-    cursor: pointer;
-}
-
-.nav-buttons button {
-    position: relative;
-    color: #e6e2cf;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    background: none;
-    overflow: hidden;
-}
-
-.nav-buttons button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.35;
-    z-index: -1;
-}
-
-.bio-button::before {
-    background: url('images/authorbg.jpg');
-}
-
-.book-button::before {
-    background: url('images/bookbg.jpg');
-}
-
-.contact-button::before {
-    background: url('images/contactbg.jpg');
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-section {
-    font-size: 1.2em;
-    position: relative;
-    width: 100%;
-    margin: 0 auto 40px auto;
-    text-align: center;
-    padding: 20px 40px;
-    overflow: hidden;
-}
-
-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.55; /* Increased opacity for better visibility */
-    z-index: -1;
-}
-
-#bio::before {
-    background: url('images/authorbg.jpg') no-repeat center center/cover;
-}
-
-#book::before {
-    background: url('images/bookbg.jpg') no-repeat center center/cover;
-}
-
-#contact::before {
-    background: url('images/contactbg.jpg') no-repeat center center/cover;
-}
-
-section p, section a {
-    background-color: rgba(13, 26, 13, 0.85); /* Semi-transparent dark background */
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 6px rgba(13, 26, 13, 0.85); /* Darker shadow for better contrast */
-    position: relative;
-    z-index: 1;
-}
-
-/* Moved media queries to bottom for better organization */
+/* Layout adjustments for landscape view */
 @media (orientation: landscape) {
-    #bio, #book {
+    .section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .section img {
+        flex: 1;
+        max-width: 40%;
+    }
+
+    .section .content {
+        flex: 2;
+        max-width: 50%;
+    }
+}
+
+/* Book section grouping */
+.book-section {
+    background-color: rgba(13, 26, 13, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(13, 26, 13, 0.85);
+    margin: 20px 0;
+}
+
+.book-section a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: rgba(230, 226, 207, 0.2);
+    border-radius: 8px;
+    text-decoration: none;
+    color: #e6e2cf;
+}
+
+.book-section a:hover {
+    background-color: rgba(230, 226, 207, 0.4);
+}
+
+
+/* Adjust layout for landscape orientation */
+@media (orientation: landscape) {
+    .section {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        gap: 20px; /* Ensures consistent spacing */
+        gap: 20px; /* Add spacing between elements */
     }
 
-    #bio img, #book img {
+    .section img {
         flex: 1;
-        max-width: 40%; /* Ensures images take equal space */
+        max-width: 40%; /* Ensure images take up equal space */
     }
 
-    #bio .content, #book .content {
-        flex: 1;
-        max-width: 50%; /* Ensures content aligns neatly */
+    .section .content {
+        flex: 2;
+        max-width: 50%; /* Ensure text content aligns correctly */
         text-align: left;
     }
 }
 
-@media (orientation: portrait) {
-    #bio, #book {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+/* Group book section links and text in a single container */
+.book-section {
+    background-color: rgba(13, 26, 13, 0.85); /* Unified background for the section */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(13, 26, 13, 0.85);
+    margin: 20px 0;
+}
 
-    #bio img, #book img,
-    #bio .content, #book .content {
-        max-width: 90%;
-    }
+.book-section a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: rgba(230, 226, 207, 0.2); /* Button background */
+    border-radius: 8px;
+    text-decoration: none;
+    color: #e6e2cf;
+}
+
+.book-section a:hover {
+    background-color: rgba(230, 226, 207, 0.4); /* Lighter hover effect */
 }
