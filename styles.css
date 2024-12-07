@@ -91,10 +91,96 @@ header h1 {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 /* Section styling */
 .section-layout .content {
     background-color: rgba(13, 26, 13, 0.85);
     box-shadow: 0px 4px 4px #0d1a0d;
+=======
+.nav-buttons button {
+    position: relative;
+    color: #e6e2cf;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background: none;
+    overflow: hidden;
+}
+
+.nav-buttons button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+.bio-button::before {
+    background: url('images/authorbg.jpg');
+}
+
+.book-button::before {
+    background: url('images/bookbg.jpg');
+}
+
+.contact-button::before {
+    background: url('images/contactbg.jpg');
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+section {
+    font-size: 1.2em;
+    position: relative;
+    width: 100%;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    padding: 20px 40px;
+    overflow: hidden;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35; /* Ensure the semitransparent overlay shows */
+    z-index: -1;
+}
+
+#bio::before {
+    background: url('images/authorbg.jpg') no-repeat center center/cover;
+}
+
+#book::before {
+    background: url('images/bookbg.jpg') no-repeat center center/cover;
+}
+
+#contact::before {
+    background: url('images/contactbg.jpg') no-repeat center center/cover;
+}
+
+section p, section a {
+    background-color: rgba(13, 26, 13, 0.85); /* Semi-transparent dark background */
+    padding: 15px;
+>>>>>>> parent of 73ce568 (Add files via upload)
     border-radius: 12px;
     padding: 15px;
     color: #e6e2cf;
@@ -106,18 +192,29 @@ header h1 {
     #bio, #book {
         display: flex;
         align-items: center;
+<<<<<<< HEAD
         justify-content: space-between;
         flex-direction: row;
+=======
+        justify-content: space-around;
+        gap: 20px; /* Ensures consistent spacing */
+>>>>>>> parent of 73ce568 (Add files via upload)
     }
 
     #bio img, #book img {
         max-width: 30%;
+<<<<<<< HEAD
         height: auto;
+=======
+>>>>>>> parent of 73ce568 (Add files via upload)
     }
 
     #bio .content, #book .content {
         max-width: 60%;
+<<<<<<< HEAD
         margin: 0 20px;
+=======
+>>>>>>> parent of 73ce568 (Add files via upload)
     }
 }
 
