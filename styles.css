@@ -155,7 +155,7 @@ section::before {
     height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0.55; /* Increased opacity for better visibility */
+    opacity: 0.35; /* Ensure the semitransparent overlay shows */
     z-index: -1;
 }
 
@@ -186,19 +186,16 @@ section p, section a {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         gap: 20px; /* Ensures consistent spacing */
     }
 
     #bio img, #book img {
-        flex: 1;
-        max-width: 40%; /* Ensures images take equal space */
+        max-width: 30%;
     }
 
     #bio .content, #book .content {
-        flex: 1;
-        max-width: 50%; /* Ensures content aligns neatly */
-        text-align: left;
+        max-width: 60%;
     }
 }
 
