@@ -34,7 +34,8 @@ header::before {
 header h1 {
     margin: 0;
     font-family: 'Playfair Display', serif;
-    font-size: 3em;
+    font-size: 2.3em;
+    font-weight: lighter;
     color: #ffcc00;
     text-shadow: 2px 2px 2px black;
     line-height: 1.2;
@@ -127,7 +128,8 @@ main {
 }
 
 section {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-weight: lighter;
     position: relative;
     width: 100%;
     margin: 0 auto 40px auto;
@@ -232,7 +234,6 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 1em;
-    font-weight: lighter;
     color: #ffcc00
 }
 
