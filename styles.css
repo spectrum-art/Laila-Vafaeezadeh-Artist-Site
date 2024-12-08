@@ -364,16 +364,19 @@ nav a:hover {
 }
 
 @media (max-width: 1023px) {
-    #bio, #book {
+    #bio div, #book div {
         display:flex;
         flex-direction: column; /* Stacks elements vertically */
         align-items: center;
         justify-content: center;
     }
 
-    #bio img, #book img, 
+    #bio img, #book img {
+        max-width: 60%;
+    }
+
     #bio .content, #book .content {
-        max-width: 90%; /* Full-width elements on mobile */
+        max-width: 90%;
     }
 
     .hamburger {
